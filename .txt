@@ -1,0 +1,35 @@
+daily-journal-app/
+│
+├── index.html                 # Main dashboard (XP, badges, quick summary)
+
+
+├── tasks.html                 # Daily tasks + sequential tasks
+├── journal.html               # Daily journal writing page
+├── streaks.html              # Streak and habit tracker
+├── analytics.html             # Visual analytics and progress charts
+├── settings.html              # Profile settings, theme, notifications
+│
+├── css/
+│   ├── style.css              # Global styles
+│   ├── journal.css            # Journal-specific styles
+│   ├── tasks.css              # Task list and forms
+│   ├── analytics.css          # Graphs, charts, progress
+│   ├── streaks.css            # Streak UI and history
+│   └── responsive.css         # Media queries for mobile/tablet/desktop
+│
+├── js/
+│   ├── main.js                # Global JS logic (XP, mode toggle, etc.)
+│   ├── tasks.js               # Daily/sequential task logic
+│   ├── journal.js             # Save/load journal entries
+│   ├── streaks.js             # Streak calculation and display
+│   ├── analytics.js           # Charts using Chart.js or pure JS
+│   └── storage.js             # Helper functions for localStorage
+│
+├── img/
+│   ├── icons/                 # All app icons (XP, streak, mood, etc.)
+│   ├── avatars/               # User avatars or profile images
+│   └── illustrations/         # Decorative illustrations (optional)
+│
+├── fonts/                     # Custom fonts if you want to use any
+│
+└── README.md                  # Description of the project (optional)
