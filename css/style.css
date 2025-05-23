@@ -1,0 +1,12 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+img{
+  width: 100%;
+}
+a, li{
+  list-style: none;
+  text-decoration: none;
+}
