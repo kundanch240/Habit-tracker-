@@ -1,12 +1,250 @@
-*{
+* {
   margin: 0px;
   padding: 0px;
 }
 
-img{
+body {
+  background: linear-gradient(to bottom, #e3c6f3, #d2e7f8);
+  height: 100%;
+}
+
+img {
   width: 100%;
 }
-a, li{
+
+a,
+li {
   list-style: none;
   text-decoration: none;
+}
+
+/* class selecting section start */
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background-color: #0000005E;
+}
+
+header img {
+  width: 20vw;
+  border-radius: 50px;
+  border-image-repeat: 5px solid black;
+  margin: 0px;
+}
+
+.main-sec {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4e4fb;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.xp-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.xp-bar-bg {
+  width: 100%;
+  height: 12px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #e0e0e0, #ccc);
+  overflow: hidden;
+}
+
+.xp-bar-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 8px;
+  background: linear-gradient(to right, #8dd7c6, #DC5555);
+  transition: width 0.6s ease-in-out;
+}
+
+.xp-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.achievement {
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  gap: 20px;
+  
+}
+
+.achievement img {
+  width: 20vw;
+  border: 5px solid #000;
+  border-radius: 50px;
+  background-color: #77B3D4;
+}
+
+.achievement img:nth-child(2) {
+  width: 21vw;
+}
+
+.add-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F3F3F3;
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.57);
+}
+
+.add-task i {
+  padding: 9px 10px;
+  background-color: #2F3E52;
+  color: #FFFFFF;
+  border-radius: 90px;
+  font-size: 0.7rem;
+  font-weight: bolder;
+}
+
+.add-task p {
+  font-weight: bolder;
+}
+
+.task {
+  position: relative;
+  /* So the child can position absolutely */
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  justify-content: space-evenly;
+  background-color: #F3F3F3;
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.1);
+  /* softer main shadow */
+  gap: 13px;
+  overflow: hidden;
+  /* Important to keep red box inside the rounded corners */
+  word-wrap: wrap;
+}
+
+
+
+.task img {
+  width: 13vw;
+  border-radius: 6px;
+}
+
+.task-fun {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 13%;
+  /* or try 5% for responsive */
+  height: 100%;
+  background-color: #FF0000;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.task-fun i:nth-child(1) {
+  background-color: #10FF21;
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.task-fun i:nth-child(2) {
+  background-color: #FF0000;
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.title p {
+  word-wrap: wrap;
+  width: 80%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 68px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 20px 20px 0 0;
+  z-index: 1000;
+}
+
+/* Individual tab buttons */
+footer button {
+  all: unset;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+/* Icons */
+footer i {
+  font-size: 24px;
+  color: #333;
+  transition: transform 0.3s, color 0.3s;
+}
+
+/* Active tab style */
+footer button.active i {
+  color: #6c63ff;
+  transform: scale(1.2);
+}
+
+/* Tap feedback */
+footer button:active {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Optional: slight icon hover effect */
+footer button:hover i {
+  color: #6c63ff;
 }
