@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
-
 <body>
   <header>
-    <a href=""><img src="/img/icons/profile.png" alt="profile"></a>
+    <a href="#"><img src="/img/icons/profile.png" alt="Profile"/></a>
     <h2>Kundan Chaudhary</h2>
   </header>
+
   <section class="main-sec">
     <div class="xp-container">
       <div class="xp-text">Level 5 | XP: <span id="xp-value">420</span>/500</div>
       <div class="xp-bar-bg">
-        <div class="xp-bar-fill" id="xp-bar-fill"></div>
+        <div class="xp-bar-fill" id="xp-bar-fill" style="width: 84%;"></div>
       </div>
     </div>
-    
+
     <div class="achievement">
-      <img src="img/icons/calender.png" alt="">
-      <img src="img/icons/fire.png" alt="" />
-    </div>
+      <img src="/img/icons/calender.png" alt="Calendar Badge"/>
+      <img src="/img/icons/fire.png" alt="Streak Badge"/>
     </div>
   </section>
+
   <section class="task-sec">
     <div class="add-task">
       <p>ADD TASK</p>
       <i class="fa-solid fa-plus"></i>
     </div>
+
     <div class="added-task">
       <div class="task">
-        <img src="/img/icons/x.png" alt="logo">
+        <img src="/img/icons/x.png" alt="Task Icon"/>
         <div class="title">
           <h3>YouTube</h3>
           <p>and you nd DJ use to receive use hi ho jata hu have</p>
@@ -47,15 +47,13 @@
       </div>
     </div>
   </section>
+
   <footer>
-    <i class="fa-solid fa-house"></i>
-    <i class="fa-solid fa-gift"></i>
-    <i class="fa-solid fa-pen-to-square"></i>
-    <i class="fa-solid fa-user
-"></i>
-    <i class="fa-solid fa-gear"></i>
+    <button class="active"><i class="fa-solid fa-house"></i></button>
+    <button><i class="fa-solid fa-chart-line"></i></button>
+    <button><i class="fa-solid fa-fire"></i></button>
+    <button><i class="fa-solid fa-user"></i></button>
   </footer>
   <script src="/js/main.js" type="text/javascript" charset="utf-8"></script>
 </body>
-
 </html>

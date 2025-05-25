@@ -1,7 +1,7 @@
 console.log('Hello World!');
 
 // lodder start 
-const currentXP = 400;
+const currentXP = 500;
 const maxXP = 500;
 const fillPercentage = (currentXP / maxXP) * 100;
 

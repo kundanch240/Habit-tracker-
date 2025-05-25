@@ -1,15 +1,19 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
+  font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom, #e3c6f3, #d2e7f8);
-  height: 100%;
+  min-height: 100vh;
+  color: #333;
 }
 
 img {
   width: 100%;
+  display: block;
 }
 
 a,
@@ -18,51 +22,55 @@ li {
   text-decoration: none;
 }
 
-/* class selecting section start */
-
+/* Header */
 header {
   display: flex;
   align-items: center;
-  gap: 50px;
-  background-color: #0000005E;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 header img {
-  width: 20vw;
-  border-radius: 50px;
-  border-image-repeat: 5px solid black;
-  margin: 0px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid black;
 }
 
+/* Main Section */
 .main-sec {
-  display: flex;
-  flex-direction: column;
-  background-color: #f4e4fb;
   margin: 20px;
-  padding: 10px;
+  padding: 20px;
+  background-color: #f4e4fb;
   border-radius: 20px;
 }
 
+/* XP Bar */
 .xp-container {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  padding: 16px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  color: #333;
-  font-family: 'Segoe UI', sans-serif;
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.xp-text {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .xp-bar-bg {
   width: 100%;
   height: 12px;
   border-radius: 8px;
-  background: linear-gradient(to right, #e0e0e0, #ccc);
+  background: linear-gradient(to right, #eee, #ccc);
   overflow: hidden;
 }
 
@@ -70,150 +78,136 @@ header img {
   height: 100%;
   width: 0%;
   border-radius: 8px;
-  background: linear-gradient(to right, #8dd7c6, #DC5555);
+  background: linear-gradient(to right, #8dd7c6, #dc5555);
   transition: width 0.6s ease-in-out;
 }
 
-.xp-text {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #222;
-}
-
+/* Achievements */
 .achievement {
   display: flex;
-  align-items: center;
-  margin: 20px auto;
+  justify-content: center;
   gap: 20px;
-  
+  margin-top: 20px;
 }
 
 .achievement img {
-  width: 20vw;
-  border: 5px solid #000;
-  border-radius: 50px;
-  background-color: #77B3D4;
+  width: 60px;
+  border: 4px solid black;
+  border-radius: 50%;
+  background-color: #77b3d4;
 }
 
-.achievement img:nth-child(2) {
-  width: 21vw;
-}
-
+/* Add Task */
 .add-task {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: #F3F3F3;
+  align-items: center;
+  background-color: #f3f3f3;
+  padding: 12px 20px;
   margin: 20px;
-  padding: 10px 20px;
   border-radius: 15px;
-  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.57);
-}
-
-.add-task i {
-  padding: 9px 10px;
-  background-color: #2F3E52;
-  color: #FFFFFF;
-  border-radius: 90px;
-  font-size: 0.7rem;
-  font-weight: bolder;
+  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .add-task p {
-  font-weight: bolder;
+  font-weight: bold;
+  width: 70vw;
 }
 
+.add-task i {
+  padding: 8px 10px;
+  background-color: #2f3e52;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+/* Task Card */
 .task {
   position: relative;
-  /* So the child can position absolutely */
   display: flex;
   align-items: center;
-  font-size: 12px;
-  justify-content: space-evenly;
-  background-color: #F3F3F3;
+  background-color: #ffffff;
   margin: 20px;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 15px;
-  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.1);
-  /* softer main shadow */
-  gap: 13px;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
+  gap: 15px;
   overflow: hidden;
-  /* Important to keep red box inside the rounded corners */
-  word-wrap: wrap;
 }
 
-
-
 .task img {
-  width: 13vw;
-  border-radius: 6px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.title {
+  flex-grow: 1;
+}
+
+.title h3 {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.title p {
+  font-size: 12px;
+  color: #444;
+  width: 50vw;
+}
+.task-content {
+  padding-right: 60px; /* adjust according to button size */
+  word-break: break-word;
 }
 
 .task-fun {
   position: absolute;
-  top: 0;
   right: 0;
-  width: 13%;
-  /* or try 5% for responsive */
+  top: 0;
   height: 100%;
-  background-color: #FF0000;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  width: 60px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  text-align: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
 }
 
-.task-fun i:nth-child(1) {
-  background-color: #10FF21;
-  height: 50%;
-  width: 100%;
-  text-align: center;
+.task-fun i {
+  flex: 1;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  font-weight: bolder;
-  font-size: 15px;
+  justify-content: center;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
 }
 
-.task-fun i:nth-child(2) {
-  background-color: #FF0000;
-  height: 50%;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  font-weight: bolder;
-  font-size: 15px;
+.task-fun i:first-child {
+  background-color: #10ff21;
 }
 
-.title p {
-  word-wrap: wrap;
-  width: 80%;
+.task-fun i:last-child {
+  background-color: #ff0000;
 }
 
+/* Footer */
 footer {
   position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
-  height: 68px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(14px);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  height: 60px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
   border-radius: 20px 20px 0 0;
   z-index: 1000;
 }
 
-/* Individual tab buttons */
 footer button {
   all: unset;
   cursor: pointer;
@@ -223,28 +217,15 @@ footer button {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background 0.2s ease;
 }
 
-/* Icons */
 footer i {
-  font-size: 24px;
+  font-size: 22px;
   color: #333;
-  transition: transform 0.3s, color 0.3s;
+  transition: 0.3s ease;
 }
 
-/* Active tab style */
 footer button.active i {
   color: #6c63ff;
   transform: scale(1.2);
-}
-
-/* Tap feedback */
-footer button:active {
-  background: rgba(0, 0, 0, 0.04);
-}
-
-/* Optional: slight icon hover effect */
-footer button:hover i {
-  color: #6c63ff;
 }
