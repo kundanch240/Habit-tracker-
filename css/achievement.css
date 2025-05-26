@@ -1,0 +1,151 @@
+body{
+  margin-bottom: 16vh;
+}
+
+.page-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.strake-ui {
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin: 20px;
+  max-width: 400px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.streak-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon-box img {
+  width: 30vw;
+  animation: pulse 2s infinite;
+}
+
+.right-info {
+  text-align: right;
+}
+
+.level {
+  background-color: #4b4f9c;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.streak-text h4 {
+  margin: 0;
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.streak-text h1 {
+  margin: 0;
+  color: #111;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  
+  50% {
+    transform: scale(1.07);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}
+
+.achivement-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.achievement-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px auto;
+}
+
+.achievement-list div {
+  border: #FFFFFF 3px solid;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 35vw;
+  height: 20vh;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, #E5F4FF, #EAC5FF);
+  ;
+}
+
+.achievement-list div img {
+  width: 25vw;
+}
+
+.icon-color {
+  color: #adaad0;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.locked-achivment {
+  background-color: #d3cef3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.icon-color:nth-child(1),
+.icon-color:nth-child(2),
+.icon-color:nth-child(4),
+.icon-color:nth-child(5) {
+  font-size: 15px;
+}
+
+.motivation {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.motivation img {
+  width: 15vw;
+}
+
+.motivation p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.shadow{
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.3),
+    0 4px 6px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}

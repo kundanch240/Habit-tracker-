@@ -9,7 +9,7 @@ body {
   background: linear-gradient(to bottom, #e3c6f3, #d2e7f8);
   min-height: 100vh;
   color: #333;
-}
+} 
 
 img {
   width: 100%;
@@ -228,4 +228,11 @@ footer i {
 footer button.active i {
   color: #6c63ff;
   transform: scale(1.2);
+}
+
+
+/* universal  class*/
+
+.flex{
+  display: flex;
 }
