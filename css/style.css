@@ -236,3 +236,9 @@ footer button.active i {
 .flex{
   display: flex;
 }
+.shadow{
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.3),
+    0 4px 6px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}

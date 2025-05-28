@@ -4,11 +4,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/tasks.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Create-tasks-page</title>
 </head>
 
 <body>
+  <header>
+    <a href="#"><img src="/img/icons/profile.png" alt="Profile" /></a>
+    <h2>Kundan Chaudhary</h2>
+  </header>
   
+  <div class="create-task-container main-sec">
+    <div class="header">
+      <h2>Create Task</h2>
+    </div>
+    
+    <form class="task-form">
+      <!-- Task Name -->
+      <div> <label for="taskName">Task Name</label>
+        <input type="text" id="taskName" placeholder="e.g. Post on Instagram" />
+      </div>
+      <!-- Category and XP -->
+      <div class="category-xp">
+        <!-- Category Section -->
+        <label for="category">Category</label>
+        <div class="custom-dropdown">
+          <select id="category" name="category">
+            <option value="" disabled selected>Select Category</option>
+            <option value="Instagram">Instagram</option>
+            <option value="YouTube">YouTube</option>
+            <option value="Study">Study</option>
+            <option value="Routines">Routines</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Custom">Custom</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Deadline -->
+      <label for="deadline">Deadline</label>
+      <div class="deadline-input">
+        <span class="icon calendar-icon"></span>
+        <input type="date" id="deadline" placeholder="Select date" />
+      </div>
+      
+      <!-- Task Type Toggle -->
+      <div class="task-type-toggle">
+        <button type="button" class="toggle-btn active" id="dailyBtn">Daily Task</button>
+        <button type="button" class="toggle-btn" id="oneTimeBtn">One-Time Task</button>
+      </div>
+      
+      <!-- Submit Button -->
+      <div class="sub-btn">
+        <button type="submit" class="submit-button">
+        <i class="fa-solid fa-circle-check"></i>  Add Task 
+        </button>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <button class="active"><i class="fa-solid fa-house"></i></button>
+    <button><i class="fa-solid fa-chart-line"></i></button>
+    <button><i class="fa-solid fa-fire"></i></button>
+    <button><i class="fa-solid fa-user"></i></button>
+  </footer>
+  <script src="js/tasks.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
