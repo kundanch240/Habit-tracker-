@@ -21,10 +21,16 @@
       <h2>Create Task</h2>
     </div>
     
-    <form class="task-form">
+    <form id="taskForm" class="task-form">
       <!-- Task Name -->
       <div> <label for="taskName">Task Name</label>
-        <input type="text" id="taskName" placeholder="e.g. Post on Instagram" />
+        <input type="text" id="taskName" placeholder="Enter the title" />
+      </div>
+      
+      <!-- discription -->
+      
+      <div> <label for="taskDiscription">Task Discription</label>
+        <input type="text" id="taskDiscription" placeholder="Task discription" />
       </div>
       <!-- Category and XP -->
       <div class="category-xp">
@@ -59,7 +65,7 @@
       <!-- Submit Button -->
       <div class="sub-btn">
         <button type="submit" class="submit-button">
-        <i class="fa-solid fa-circle-check"></i>  Add Task 
+          <i class="fa-solid fa-circle-check"></i> Add Task
         </button>
       </div>
     </form>
