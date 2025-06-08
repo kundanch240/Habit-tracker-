@@ -9,7 +9,7 @@ body {
   background: linear-gradient(to bottom, #e3c6f3, #d2e7f8);
   min-height: 100vh;
   color: #333;
-} 
+}
 
 img {
   width: 100%;
@@ -29,7 +29,7 @@ header {
   gap: 20px;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 10px 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header img {
@@ -156,8 +156,10 @@ header img {
   color: #444;
   width: 50vw;
 }
+
 .task-content {
-  padding-right: 60px; /* adjust according to button size */
+  padding-right: 60px;
+  /* adjust according to button size */
   word-break: break-word;
 }
 
@@ -233,12 +235,57 @@ footer button.active i {
 
 /* universal  class*/
 
-.flex{
+.flex {
   display: flex;
 }
-.shadow{
+
+.shadow {
   box-shadow:
     0 8px 16px rgba(0, 0, 0, 0.3),
     0 4px 6px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.3s ease;
+}
+
+.added-task {
+  margin-bottom: 10vh;
+}
+
+.alert {
+  position: absolute;
+  top: 50%;
+  background-color: #FFFFFF;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.alert-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.button-alert-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+#cancel{
+  margin: 6px;
+  padding: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #FF0000A3;
+}
+#ok{
+  margin: 6px;
+  padding: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #00FF07A3;
 }

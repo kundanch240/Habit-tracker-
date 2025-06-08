@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
       category,
       deadline,
       type: taskType,
-      completed: false
     };
 
     let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -44,3 +43,4 @@ document.addEventListener("DOMContentLoaded", () => {
     oneTimeBtn.classList.remove("active");
   });
 });
+

@@ -24,7 +24,7 @@
     <form id="taskForm" class="task-form">
       <!-- Task Name -->
       <div> <label for="taskName">Task Name</label>
-        <input type="text" id="taskName" placeholder="Enter the title" />
+        <input type="text" id="taskName" placeholder="Enter the title" required />
       </div>
       
       <!-- discription -->
@@ -37,14 +37,22 @@
         <!-- Category Section -->
         <label for="category">Category</label>
         <div class="custom-dropdown">
-          <select id="category" name="category">
+          <select id="category" name="category" required>
+          
             <option value="" disabled selected>Select Category</option>
-            <option value="Instagram">Instagram</option>
+            
+            <option value="instagram">instagram</option>
+            
             <option value="YouTube">YouTube</option>
+            
             <option value="Study">Study</option>
-            <option value="Routines">Routines</option>
+            
+            <option value="Routine">Routine</option>
+            
             <option value="Fitness">Fitness</option>
+            
             <option value="Custom">Custom</option>
+            
           </select>
         </div>
       </div>
